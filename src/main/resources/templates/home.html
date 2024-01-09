@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>RBI_Bank</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+	<form th:action="@{/login}" th:object="${home}" method="POST">
+	<h1 th:text="${home} " style="text-align: center;" />
+		<h2>Existing User Can Login</h2>
+		<table>
+			<tr>
+
+				<td><input type="submit" value="Login Here" style="background-color: lightskyblue"; /></td>
+
+			</tr>
+		</table>
+	</form>
+
+	<form th:action="@{/register}" th:object="${home}" method="POST">
+		<h2>New User Can Register</h2>
+
+		<table>
+			<tr>
+				<!--	<p>Press For Login</p>-->
+				<td><input type="submit" value="Register Here" style="background-color:lightskyblue"; /></td>
+				<!--<a href="login">Login Here</a>-->
+			</tr>
+		</table>
+	</form>
+
+</body>
+
+</html>

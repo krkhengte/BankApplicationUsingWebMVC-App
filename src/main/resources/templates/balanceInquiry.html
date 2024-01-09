@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>RBI_Bank_Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+	<form th:action="@{/balanceInquiryDone}" th:object="${account}" method="POST">
+
+		<table>
+
+			<tr>
+
+				<td>Account Number</td>
+				<td><input type="text" th:field="*{accountnumber}" placeholder="Enter Account Number" /></td>
+				<td style="color: red;"><span th:if="${#fields.hasErrors('accountnumber')}"
+							th:errors="*{accountnumber}"></span></td>
+			</tr>
+
+			<tr>
+
+				<td></td>
+				<td><input type="submit" value="Submit" /></td>
+
+			</tr>
+
+		</table>
+
+	</form>
+
+</body>
+
+</html>

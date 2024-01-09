@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+
+</head>
+
+<body>
+
+	<form th:action="@{/atm}" th:object="${MSG}" method="POST">
+		<h1 th:text="${MSG}"></h1></br>
+		<a href="/">Go Home</a></br>
+		<a href="/login">Go Login</a></br>
+	
+		
+		<tr>
+			<td>ATM SERVICE</td>
+			<td><input type="submit" value="Click Here" /></td>
+		</tr>
+
+	</form>
+
+
+</body>
+
+</html>

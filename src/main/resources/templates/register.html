@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>RBI_Bank_Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+	<h1>Registration Form</h1>
+	<form th:action="@{/registerSuccess}" th:object="${account}" method="POST">
+
+		<table>
+
+			<h3>
+			<tr>
+
+
+				<td>Holder Name</td>
+				<td><input type="text" th:field=*{holdername} placeholder="Enter Holder Name" /></td>
+
+			</tr>
+
+			<tr>
+
+
+				<td>Account Balance</td>
+				<td><input type="text" th:field=*{accountbalance} placeholder="Enter Account Balance" /></td>
+
+			</tr>
+			<tr>
+
+
+				<td>User Name</td>
+				<td><input type="text" th:field=*{username} placeholder="Enter User Name" /></td>
+				<td style="color: red;"><span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+				</td>
+			</tr>
+			<tr>
+
+
+				<td>Password</td>
+				<td><input type="text" th:field=*{password} placeholder="Enter Password" /></td>
+				<td style="color: red;"><span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+				</td>
+			</tr>
+			<tr>
+
+
+				<td>Email Id</td>
+				<td><input type="text" th:field=*{holderemailid} placeholder="Enter Email Id" /></td>
+				<td style="color: red;"><span th:if="${#fields.hasErrors('holderemailid')}"
+						th:errors="*{holderemailid}"></span>
+				</td>
+			</tr>
+			<tr>
+
+
+				<td>Gender</td>
+				<td><input type="text" th:field=*{holdergender} placeholder="Enter Gender" /></td>
+
+			</tr>
+			<tr>
+
+
+				<td>Mobile Number</td>
+				<td><input type="text" th:field=*{holdermobile} placeholder="Enter Mobile Number" /></td>
+				<td style="color: red;"><span th:if="${#fields.hasErrors('holdermobile')}"
+						th:errors="*{holdermobile}"></span>
+				</td>
+			</tr>
+			<tr>
+
+
+				<td></td>
+				<td><input type="submit" value="Sublit" style="background-color: aqua;" /></td>
+
+			</tr>
+</h3>
+
+		</table>
+
+	</form>
+	<a href="/">Go To Home</a>
+</body>
+
+</html>

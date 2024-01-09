@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>RBI_Bank_Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<h1>Login Here</h1>
+
+	<form th:action="@{/loginSuccess}" th:object="${account}" method="POST">
+
+		<div class="form" style="align-self: center;">
+			<table>
+
+				<tr>
+
+					<td>User Name</td>
+					<td><input type="text" th:field=*{username} placeholder="Enter UserName" /></td>
+					<td style="color: red;"><span th:if="${#fields.hasErrors('username')}"
+							th:errors="*{username}"></span></td>
+							
+				</tr>
+
+				<tr>
+
+					<td>User Password</td>
+					<td><input type="password" th:field=*{password} placeholder="Enter Password" /></td></br>
+					<td style="color: red;"><span th:if="${#fields.hasErrors('password')}"
+							th:errors="*{password}"></span></td>
+				</tr>
+
+
+				<tr>
+
+					<td></td>
+					<td><input type="submit" value="Submit" style="background-color: deepskyblue;" /></td>
+
+				</tr>
+
+			</table>
+		</div>
+		<tr>
+			<td></td>
+			<td>
+				<h3 th:text="${failed}" style="color: red;"></h3>
+			</td>
+		</tr>
+
+	</form>
+	<a href="/">Go To Home</a>
+
+</body>
+
+</html>

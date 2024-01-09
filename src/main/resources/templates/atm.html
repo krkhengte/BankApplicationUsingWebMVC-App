@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<style>
+		/* Add some basic styling to the tables */
+		table {
+			/*border-collapse: collapse; */
+			width: 45%;
+			/* Adjust the width as needed */
+			margin-right: 70px;
+			/* Add some margin between tables */
+			float: left;
+			/* Make tables float left for side-by-side placement */
+		}
+
+		th,
+		td {
+			/*border: 1px solid #ccc; */
+			padding: 8px;
+			text-align: left;
+			border-color: black;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+
+		<h1 style="text-align: center; color: darkmagenta;" ,>PLEASE SELECT A TRANSACTION</h1>
+
+		<table>
+				<form th:action="@{/balanceInq}" th;object="${account}" method="POST" >
+			<!--<caption>Table 1</caption>-->
+			<tr>
+				<td>
+					<h2 style="color: red;">BALANCE INQUIRY</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" /></h1>
+				</td>
+			</tr>
+
+			</form>
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">MINI STATEMENT</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" />
+				</td>
+			</tr>
+			<!-- Add more rows as needed -->
+
+			<!--</form>-->
+
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">SERVICE</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" />
+				</td>
+			</tr>
+			<!-- Add more rows as needed -->
+
+			<!--</form>-->
+
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">BILL PAYMENTS</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" />
+				</td>
+			</tr>
+			<!-- Add more rows as needed -->
+
+			<!--</form>-->
+
+
+		</table>
+
+
+		<table>
+			<!--	<form >-->
+			<!--<caption>Table 2</caption>-->
+			<tr>
+				<td>
+					<h2 style="color: red;">FAST CASH</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" /></h1>
+				</td>
+			</tr>
+
+			<!--</form>-->
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">CASH WITHDRAWAL</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" /></h1>
+				</td>
+			</tr>
+
+			<!--</form>-->
+
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">PIN CHANGE</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" /></h1>
+				</td>
+			</tr>
+
+			<!--</form>-->
+			<!--	<form >-->
+			<tr>
+				<td>
+					<h2 style="color: red;">FUND TRANSFER</h2>
+				</td>
+				<td></td>
+				<td>
+					<h1><input type="submit" value="Click Here" style="background-color: deepskyblue;" /></h1>
+				</td>
+			</tr>
+
+			<!--</form>-->
+		</table>
+
+
+
+	</div>
+
+	<a href="/">Back To Home</a>
+
+</body>
+
+</html>
