@@ -11,11 +11,11 @@
 	<groupId>com.example</groupId>
 	<artifactId>Bank_Application_UsingWebMVC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Bank_Application_UsingWebMVC</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
